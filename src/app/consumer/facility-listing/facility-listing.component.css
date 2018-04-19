@@ -1,0 +1,403 @@
+/*breadcrumbs starts*/
+
+.breadcrumbsSection {
+    background: #6a97ff;
+    padding-left: 30px;
+}
+
+.breadcrumbsSection ul {
+    height: 40px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.breadcrumbsSection ul li {
+    color: #fff;
+    font-size: 12px;
+}
+
+.breadcrumbsSection ul span {
+    color: #fff;
+    padding: 0px 7px;
+}
+
+
+/*breadcrumbs ends*/
+
+
+/*facility listing page CSS starts from here*/
+
+.facilityListingContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: #fff;
+    min-height: 500px;
+}
+
+.searchResultsHeading {
+    padding-top: 15px;
+    font-size: 17px;
+    font-weight: normal;
+    padding-bottom: 15px;
+}
+
+.filterContainer {
+    justify-content: space-between;
+    border-bottom-style: solid;
+    display: flex;
+    padding-bottom: 28px;
+    border-bottom-color: #DFDFDF;
+    height: 40px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15)!important;
+}
+
+.filterFieldsContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-items: center;
+    height: 45px;
+}
+
+.myclass {
+    width: 355px !important;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    height: 45px;
+    cursor: pointer;
+}
+
+.searchAndFilterIcon {
+    font-size: 20px;
+}
+
+.filterFields {
+    width: 355px;
+    color: gray;
+    padding-left: 12px;
+    height: 100%;
+    box-sizing: border-box;
+    border: 1px solid gray;
+}
+
+.buttonContainer img {
+    width: 20px;
+    height: 20px;
+}
+
+.btnActiveColor {
+    background-color: #004DB7!important;
+}
+
+.iconDesign {
+    font-size: 25px;
+    position: absolute;
+    padding-left: 10px;
+}
+
+.filterFindButton {
+    width: 45px;
+    height: 45px;
+}
+
+huddil-dropdown-component {
+    border: 1px solid #c1c1c1;
+    height: 43px;
+}
+
+
+/*filters CSS completed here*/
+
+
+/*filter box CSS starts from here*/
+
+.filterBoxContainer {
+    height: auto;
+    display: flex;
+}
+
+.hideFilterBoxContainer {
+    display: none;
+}
+
+.subfilterform {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.progressSlider {
+    width: 300px;
+    height: 2px;
+    box-shadow: 0px 2px 5px 0px #D7D7D7;
+}
+
+.filterBoxFieldContainer {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+    align-items: center;
+}
+
+.priceRangeSliderText {
+    display: flex;
+    flex-direction: column;
+}
+
+.priceRangeSliderText p {
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+.filterBoxInputFiled {
+    width: 310px;
+    height: 40px;
+    padding-left: 45px;
+    border: 1px solid gray;
+    font-size: 12px;
+}
+
+.extraFilterBox {
+    /*position: relative;*/
+    display: flex;
+    align-items: center;
+    height: 0px;
+    transition: height 0.3s ease-in-out;
+    border: 1px solid #c1c1c1;
+}
+
+.openFilterHeight {
+    height: 130px;
+    border: 1px solid #c1c1c1;
+}
+
+.totext {
+    font-size: 12px;
+}
+
+.filterBoxSelectField {
+    color: gray;
+    padding-left: 12px;
+    width: 315px;
+    height: 34px;
+}
+
+.filterBoxSubContainer {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    align-items: center;
+}
+
+.filterBoxCheckboxField {
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.filterBoxCheckboxField p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.facilityItems {
+    width: 370px;
+}
+
+.facilityItemContainer {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.loadingContainer {
+    min-height: 410px;
+}
+
+.checkboxFiled {
+    height: 30px;
+    width: 20px;
+}
+
+
+/*slider CSS starts*/
+
+#priceSlider,
+#capacitySlider {
+    width: 340px;
+    height: 10px;
+}
+
+.ui-slider {
+    background: #D8D8D8;
+    border: none;
+}
+
+.priceLabels,
+.capacityLabels {
+    display: flex;
+    justify-content: space-between;
+    color: gray;
+}
+
+.priceLabels p,
+.capacityLabels p {
+    font-size: 12px;
+    font-weight: 100;
+}
+
+#price-slider-value,
+#capacity-slider-value {
+    padding-left: 9px;
+}
+
+.sliderDetails {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filterBoxSubContainer .filterFieldsContainer {
+    margin-bottom: 7px;
+    margin-top: 7px;
+}
+
+facility-listing-info {
+    margin-right: 8px;
+}
+
+.buttonContainer:hover {
+    background-color: #6A97FF;
+}
+
+.iconsStyle {
+    opacity: 0.5;
+}
+
+.sortByContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.15)!important;
+    padding-bottom: 12px;
+    align-items: center;
+}
+
+.sortByContainer span {
+    font-size: 20px;
+}
+
+.SortByfilterField {
+    height: 33px;
+    font-size: 13px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+@media screen and (min-width:320px) and (max-width:480px) and (orientation:portrait) {
+    .facilityListingContainer {
+        padding: 13px;
+    }
+    .filterContainer {
+        flex-flow: row wrap;
+        height: auto;
+        justify-content: space-around;
+    }
+    .filterContainer huddil-dropdown-component {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .filterFindButton {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .filterBoxSubContainer {
+        width: 335px;
+        padding: 3px;
+    }
+    .filterBoxContainer {
+        flex-flow: row wrap;
+    }
+    .filterBoxInputFiled {
+        width: 222px;
+    }
+    .totext {
+        display: none;
+    }
+    .subfilterform {
+        width: 100%;
+    }
+    app-footer {
+        display: none;
+    }
+    .myclass {
+        width: 270px !important;
+    }
+    .openFilterHeight {
+        height: 400px;
+    }
+    .service-provider-page {
+        min-height: 100px;
+    }
+}
+
+@media screen and (min-width:640px) and (max-width:800px) and (orientation:landscape) {
+    .facilityListingContainer {
+        padding: 13px;
+        margin-right: 0px;
+    }
+    .openFilterHeight {
+        height: 235px;
+    }
+    .filterContainer {
+        flex-flow: row wrap;
+        height: auto;
+        justify-content: space-around;
+    }
+    .filterContainer huddil-dropdown-component {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .filterFindButton {
+        width: 100%;
+        margin-top: 12px;
+    }
+    .filterBoxSubContainer {
+        width: 680px;
+        padding: 3px;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .filterBoxContainer {
+        flex-flow: row wrap;
+    }
+    .filterBoxInputFiled {
+        width: 222px;
+    }
+    .totext {
+        display: none;
+    }
+    .subfilterform {
+        width: 100%;
+    }
+    .myclass {
+        width: 275px !important;
+    }
+    app-footer {
+        display: none;
+    }
+}

@@ -1,0 +1,83 @@
+<service-provider-header></service-provider-header>
+<div class="service-provider-main-page">
+    <!--sidebar-->
+    <div class="service-provider-leftSide">
+        <sidebar></sidebar>
+    </div>
+
+    <!--right side seciton-->
+    <div class="service-provider-rightSide">
+        <!--breadcrumbs-->
+        <div class="breadcrumbsSection">
+
+            <ul>
+                <li></li>
+
+            </ul>
+            <i (click)="myFunction()" class="material-icons userMenuIcon">menu</i>
+        </div>
+        <div class="userMenuContainer" *ngIf="isShowSideMenuPopup">
+            <div class="userMenuFieldsContainer">
+
+                <div class="sidebarItems" routerLink='/service-provider/dashboard' routerLinkActive="active-link">
+                    <div class="sidebarIcon">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                    </div>
+                    <p>Dashboard</p>
+                    <div class="sidebarIcon">
+
+                    </div>
+                </div>
+                <div class="sidebarItems" routerLink='/service-provider/facility-listing' routerLinkActive="active-link">
+                    <div class="sidebarIcon">
+                        <i class="material-icons">location_city</i>
+                    </div>
+                    <p>Facility</p>
+                    <div class="sidebarIcon">
+
+                    </div>
+                </div>
+                <div class="sidebarItems" routerLink='/service-provider/payment-history' routerLinkActive="active-link">
+                    <div class="sidebarIcon">
+                        <i class="material-icons">payment</i>
+                    </div>
+                    <p>Payment</p>
+                    <div class="sidebarIcon">
+
+                    </div>
+                </div>
+                <div class="sidebarItems" routerLink='/service-provider/booking-history' routerLinkActive="active-link">
+                    <div class="sidebarIcon">
+                        <i class="material-icons">date_range</i>
+                    </div>
+                    <p>Booking</p>
+                    <div class="sidebarIcon">
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="service-provider-page dashboard-container">
+            <div class="dashboardContainer">
+                <div class="dashboardStatisticsPart">
+                    <div class="facility-dashboard">
+                        <facility-dashboard></facility-dashboard>
+                    </div>
+                    <div class="payment-dashboard">
+                        <payment-dashboard></payment-dashboard>
+                    </div>
+                    <div class="booking-dashboard">
+                        <booking-dashboard></booking-dashboard>
+                    </div>
+                </div>
+                <!--<div class="booking-history">
+                    <booking-history-dashboard></booking-history-dashboard>
+                </div>-->
+            </div>
+        </div>
+
+    </div>
+</div>
+<service-provider-footer></service-provider-footer>

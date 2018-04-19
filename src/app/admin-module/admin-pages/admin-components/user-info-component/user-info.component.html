@@ -1,0 +1,107 @@
+<div class="userInfoContainer">
+
+    <div class="userProfileContainer" (click)="getSPDetails()" [class.cursorPointer]="userInfoObject_Input.userType=='7'">
+        <!-- <span class="active" *ngIf="isUserActive"></span>
+        <span class="blocked" *ngIf="!isUserActive"></span>
+        <img src="assets/meetingRoom.jpg" class="userThumbnail" /> -->
+        <div class="nameAndStatusContainer">
+            <span class="userNameSpan">{{userInfoObject_Input.userName}}</span>
+            <small>User Name</small>
+            <!-- <small *ngIf="isUserActive">Active Now</small>
+            <small *ngIf="!isUserActive">Blocked Now</small> -->
+        </div>
+    </div>
+
+    <div class="verticalLine"></div>
+
+    <div class="userEmailIdContainer" (click)="getSPDetails()" [class.cursorPointer]="userInfoObject_Input.userType=='7'">
+        <div class="emailIdContainer">
+            {{userInfoObject_Input.emailId}}
+            <small>Email</small>
+        </div>
+    </div>
+
+    <div class="verticalLine"></div>
+
+    <div class="userMobileNumberContainer" (click)="getSPDetails()" [class.cursorPointer]="userInfoObject_Input.userType=='7'">
+        <div class="mobileNumberContainer">
+            {{userInfoObject_Input.mobileNo}}
+            <small style="color:green;" *ngIf="this.userInfoObject_Input.active == 1 || this.userInfoObject_Input.active == 3">Mobile Verified</small>
+            <small style="color:red;" *ngIf="this.userInfoObject_Input.active == 0 || this.userInfoObject_Input.active == 2">Mobile Not Verified</small>
+        </div>
+    </div>
+
+    <div class="verticalLine"></div>
+
+    <div class="activeDeactiveButtonContainer">
+        <span></span>
+        <button class="activeButton" title={{buttonTitleText}} (click)="activateOrBlockUser(userInfoObject_Input.id, userInfoObject_Input.active)" [class.deactiveButton]="this.userInfoObject_Input.active == 2 || this.userInfoObject_Input.active == 3" id="button_activeOrBlock">{{buttonText}}</button>
+        <span>{{buttonTitleText}}</span>
+    </div>
+
+    <div class="verticalLine" [class.huddilCommissionContainerHide]="!displayHuddilCommission"></div>
+
+    <div class="huddilCommissionContainer" [class.huddilCommissionContainerHide]="!displayHuddilCommission">
+        <span class="huddilCommissionHeading">Huddil Commission</span>
+        <span class="huddilCommissionText">Current Month:{{currentMonthCommission}}%</span>
+        <span class="huddilCommissionText">Next Month:<input type="number" id="input_newSpCommission" [(ngModel)]="newSpCommissionNgModel" class="commissionInputField" placeholder="{{nextMonthCommission}}">%</span>
+        <span class="huddilCommissionErrorMessage">{{huddilCommissionErrorMessage}}</span>
+        <button class="saveCommissionButton adminButton" (click)="updateSpCommission(userInfoObject_Input.id)" id="button_updateSpCommission">Save</button>
+    </div>
+
+</div>
+<div *ngIf="showServiceProviderDetails" class="confirmAlert ">
+    <div class="mszbox zoomIn" [class.zoomOut]="!showServiceProviderDetails">
+
+        <div class="spDetailsPopUpHeader">
+            <span>Service Provider Details</span>
+        </div>
+        <div class="spDetailsPopup-body" *ngIf="spDetails != '' || spDetails != null">
+            <div class="rowSpDetails">
+                <label class="headingPopUpLabel">Contact Person Name</label>
+                <label class="headingPopUpLabel">Email Id</label>
+                <label class="headingPopUpLabel">Company Name</label>
+                <label class="headingPopUpLabel">Mobile Number</label>
+                <label class="headingPopUpLabel">Address</label>
+                <label class="headingPopUpLabel">City</label>
+                <label class="headingPopUpLabel">Country</label>
+                <label class="headingPopUpLabel">Pin Code</label>
+                <label class="headingPopUpLabel">Website</label>
+
+
+
+            </div>
+            <div class="rowSpDetails">
+                <label class="dataPopUpLabel" *ngIf="spDetails.addressingName == null || spDetails.addressingName ==''">NA</label>
+                <label class="dataPopUpLabel" *ngIf="spDetails.addressingName != null && spDetails.addressingName !=''">{{spDetails.addressingName}}</label>
+
+                <label class="dataPopUpLabel" *ngIf="spDetails.emailId == null || spDetails.emailId ==''">NA</label>
+                <label class="dataPopUpLabel" *ngIf="spDetails.emailId != null && spDetails.emailId != ''">{{spDetails.emailId}}</label>
+
+                <label class="dataPopUpLabel" *ngIf="spDetails.companyName == null || spDetails.companyName ==''">NA</label>
+                <label class="dataPopUpLabel" *ngIf="spDetails.companyName != null && spDetails.companyName != ''">{{spDetails.companyName}}</label>
+
+                <label class="dataPopUpLabel" *ngIf="spDetails.mobileNo == null || spDetails.mobileNo ==''">NA</label>
+                <label class="dataPopUpLabel" *ngIf="spDetails.mobileNo != null && spDetails.mobileNo !=''">{{spDetails.mobileNo}}</label>
+
+                <label class="dataPopUpLabel" *ngIf="spDetails.address == null || spDetails.address ==''">NA</label>
+                <label class="dataPopUpLabel" *ngIf="spDetails.address != null &&  spDetails.address !=''">{{spDetails.address}}</label>
+
+                <label class="dataPopUpLabel" *ngIf="spDetails.city == null || spDetails.city ==''">NA</label>
+                <label class="dataPopUpLabel" *ngIf="spDetails.city != null &&  spDetails.city !=''">{{spDetails.city}}</label>
+
+                <label class="dataPopUpLabel" *ngIf="spDetails.country == null || spDetails.country == ''">NA</label>
+                <label class="dataPopUpLabel" *ngIf="spDetails.country != null &&  spDetails.country != ''">{{spDetails.country}}</label>
+
+                <label class="dataPopUpLabel" *ngIf="spDetails.pincode == null || spDetails.pincode == ''">NA</label>
+                <label class="dataPopUpLabel" *ngIf="spDetails.pincode != null &&  spDetails.pincode != ''">{{spDetails.pincode}}</label>
+
+                <label class="dataPopUpLabel" *ngIf="spDetails.website == null || spDetails.website == ''">NA</label>
+                <label class="dataPopUpLabel" *ngIf="spDetails.website != null &&  spDetails.website != ''">{{spDetails.website}}</label>
+            </div>
+        </div>
+        <div class="popup-footer">
+            <button class="consumerModuleButtons spDetailsPopUpButton" (click)="closeSpDetailsPopUp()">Close</button>
+        </div>
+    </div>
+</div>
