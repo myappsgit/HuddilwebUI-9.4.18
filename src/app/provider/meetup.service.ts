@@ -137,8 +137,8 @@ export class MeetupService {
         //this.wrapper_baseUrl = 'http://52.15.86.32:8080/wrapper-1.1.0/';
         //this.huddil_baseUrl = 'http://52.15.86.32:8080/huddil-1.1.0/';
         //Added on 20.2.2018 Tuesday
-        this.wrapper_baseUrl = 'http://192.168.2.103:9191/wrapper-1.0.12.1/';
-        this.huddil_baseUrl = 'http://192.168.2.103:9191/huddil-1.0.14/';
+        this.wrapper_baseUrl = 'http://ec2-18-188-31-0.us-east-2.compute.amazonaws.com:8080/wrapper-1.0.11.war/';
+        this.huddil_baseUrl = 'http://ec2-18-188-31-0.us-east-2.compute.amazonaws.com:8080/huddil-1.0.12.war/';
         //Test Server http://192.168.1.26:9191
         //this.wrapper_baseUrl = 'http://192.168.1.26:9191/wrapper-1.0.0-BUILD-SNAPSHOT/';
         //this.huddil_baseUrl = 'http://192.168.1.26:9191/huddil-1.0.0-BUILD-SNAPSHOT/';
@@ -148,7 +148,7 @@ export class MeetupService {
         //this.huddil_baseUrl = 'http://192.168.1.48:9191/huddil-1.0.0-BUILD-SNAPSHOT/';
 
         let protocol = location.protocol;
-        this.baseUrl = protocol + '//sff8afvncp.huddil.com/';
+        this.baseUrl = protocol + '//ec2-13-126-39-101.ap-south-1.compute.amazonaws.com';
         //this.baseUrl = protocol + '//198.1.85.118/';
         //this.baseUrl = protocol + '//huddil.com/';
 
