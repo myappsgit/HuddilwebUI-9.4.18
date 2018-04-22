@@ -138,7 +138,7 @@ export class MeetupService {
         //this.huddil_baseUrl = 'http://52.15.86.32:8080/huddil-1.1.0/';
         //Added on 20.2.2018 Tuesday
         this.wrapper_baseUrl = 'http://ec2-18-219-16-163.us-east-2.compute.amazonaws.com:8080/wrapper-1.0.13.war/';
-        this.huddil_baseUrl = 'http://ec2-18-219-16-163.us-east-2.compute.amazonaws.com:8080/huddil-1.0.14.war/;
+        this.huddil_baseUrl = 'http://ec2-18-219-16-163.us-east-2.compute.amazonaws.com:8080/huddil-1.0.14.war/';
         //Test Server http://192.168.1.26:9191
         //this.wrapper_baseUrl = 'http://192.168.1.26:9191/wrapper-1.0.0-BUILD-SNAPSHOT/';
         //this.huddil_baseUrl = 'http://192.168.1.26:9191/huddil-1.0.0-BUILD-SNAPSHOT/';
